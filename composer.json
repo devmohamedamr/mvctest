@@ -1,0 +1,18 @@
+{
+    "name": "itrax/mvc",
+    "description": "itrax mvc",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Itrax\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mohamed amr",
+            "email": "dev.mohamedamr@gmail.com"
+        }
+    ],
+    "require": {}
+}
