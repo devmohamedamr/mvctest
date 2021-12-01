@@ -48,6 +48,7 @@ class bootstrap
     public function run(){
         $session= new AppSessionHandler();
         $session->start();
+        // $session->kill();
     }
 
 }

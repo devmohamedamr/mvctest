@@ -10,7 +10,7 @@ class AppSessionHandler  extends \SessionHandler
     private $sessionSSL= false;
     private $sessionHttpOnly=true;
     private $sessionPath= '/';
-    private $sessionDomain='localhost';
+    private $sessionDomain='mvc.test';
     private $sessionSavePath=SESSION_SAVE_PATH;
     // private  $sessionCipherAlgo='aes-256-cbc-hmac-sha256';
     // private $sessionCipherKey='WYCRYPT0K3Y2020';

@@ -6,10 +6,16 @@ use Itrax\Mvc\core\bootstrap;
 use Itrax\Mvc\core\registry;
 use Itrax\Mvc\core\Database\db;
 use Itrax\Mvc\core\Database\dbpdo;
+use Itrax\Mvc\core\saas\saas;
+use Itrax\Mvc\core\saas\saas_helper;
 use Itrax\Mvc\core\validation;
 
 
-registry::set("db",new dbpdo);
+registry::set("main",new db("vacard"));
+
+
+(new saas())->run($_SERVER['HTTP_HOST']);
+
 registry::set("validation",new validation);
 
 

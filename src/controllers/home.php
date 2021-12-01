@@ -11,9 +11,9 @@ class home extends controller
 {
     public function index()
     {
-      $data = registry::get("db")->select("category","*")->getAll();
+    //   $data = registry::get("user_card_connection")->select("user","*")->getAll();
 
-      print_r($data);
+        // print_r($data);die;
         return $this->view("index",["title"=>"mohamed"]);
     }
 

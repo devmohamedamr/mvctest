@@ -8,9 +8,9 @@ class db implements IDbstanderd{
     public $query;
     public $sql;
 
-    public function __construct()
+    public function __construct($dbname)
     {
-        $this->connnection = mysqli_connect("localhost","root","","cms");
+        $this->connnection = mysqli_connect("localhost","root","",$dbname);
     }
 
     public function select($table,$column){
@@ -20,6 +20,7 @@ class db implements IDbstanderd{
 
     public function where($column,$compair,$value){
         $this->sql .= " WHERE $column $compair '$value'";
+        // echo $this->sql;die;
         return $this;
     }
 
@@ -48,7 +49,8 @@ class db implements IDbstanderd{
     }
 
     public function getRow(){
-          $this->query();
+        $this->query();
+        // echo $this->query;die;
         $row = mysqli_fetch_assoc($this->query);
         return $row;
     }
@@ -95,7 +97,7 @@ class db implements IDbstanderd{
 
 
     public function query(){
-        // echo $this->sql;die;
+        // echo $this->sql;
         $this->query =  mysqli_query($this->connnection,$this->sql);
     }
 
