@@ -30,4 +30,8 @@ class saas implements Isaas
             registry::set("user_card_connection",new db($subdomain));
         }
     }
+
+    public function isSubDomain(){
+        return (count(explode('.',$_SERVER['HTTP_HOST'])) > 2) ? true : false;
+    }
 }

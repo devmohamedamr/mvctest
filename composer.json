@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "Itrax\\Mvc\\": "src/"
-        }
+        },
+        "files": [
+            "src/core/support/helper.php"
+        ]
     },
     "authors": [
         {

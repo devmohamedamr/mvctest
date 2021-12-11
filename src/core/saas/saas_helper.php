@@ -25,4 +25,9 @@ class saas_helper{
         mysqli_multi_query($database, $content);
     }
 
+    public static function saasController(){
+        $is_saas =  (new saas)->isSubDomain();
+        return  $is_saas ? 'vcard' : 'home';
+    }
+
 }

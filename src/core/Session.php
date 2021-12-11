@@ -3,7 +3,7 @@ namespace Itrax\Mvc\core;
 
 define('SESSION_SAVE_PATH',realpath(dirname(__DIR__)."/../SessionFiles"));
 
-class AppSessionHandler  extends \SessionHandler 
+class Session  extends \SessionHandler 
   {
     private  $sessionName= "MyAppSess";
     private $sessionMaxLifeTime= 0;

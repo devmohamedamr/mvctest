@@ -3,17 +3,15 @@ namespace Itrax\Mvc\controllers;
 
 use Itrax\Mvc\core\controller;
 use Itrax\Mvc\core\registry;
+use Itrax\Mvc\core\saas\contract\Ihost;
 use Itrax\Mvc\core\validation;
 
 
 
-class home extends controller
+class home  extends controller implements Ihost
 {
     public function index()
-    {
-    //   $data = registry::get("user_card_connection")->select("user","*")->getAll();
-
-        // print_r($data);die;
+    {        
         return $this->view("index",["title"=>"mohamed"]);
     }
 

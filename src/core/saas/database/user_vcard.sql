@@ -26,7 +26,9 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
-  `cover` varchar(255) NOT NULL
+  `cover` varchar(255) NOT NULL,
+  `color` varchar(200) NOT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 

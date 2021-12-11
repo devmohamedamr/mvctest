@@ -15,4 +15,8 @@ class registry
     public static function get($key){
         return static::$object[$key];
     }
+
+    public static function has($key){
+        return (array_key_exists($key,static::$object));
+    }
 }
